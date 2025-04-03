@@ -1,0 +1,168 @@
+/* login.component.css */
+.login-container {
+    max-width: 480px;
+    margin: 100px auto; /* Centered with more breathing room */
+    padding: 40px;
+    background: rgba(20, 20, 30, 0.9); /* Dark semi-transparent glass effect */
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.1); /* Neon glow + shadow */
+    backdrop-filter: blur(10px); /* Glassmorphism */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    font-family: 'Poppins', sans-serif; /* Modern font (add via Google Fonts) */
+    animation: floatIn 0.8s ease-out; /* Subtle entrance animation */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00ffcc; /* Neon cyan */
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5); /* Glowing effect */
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+    position: relative; /* For potential animations */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #b0b0c0; /* Soft grayish-white */
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 14px;
+    background: rgba(40, 40, 60, 0.7); /* Dark input background */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff; /* White text */
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #ff007a; /* Neon pink */
+    box-shadow: 0 0 15px rgba(255, 0, 122, 0.5); /* Glowing neon effect */
+    background: rgba(40, 40, 60, 1);
+  }
+  
+  button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #ff007a, #00ffcc); /* Neon pink to cyan gradient */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+  }
+  
+  button:hover:not(:disabled) {
+    transform: scale(1.05); /* Slight scale-up */
+    box-shadow: 0 0 20px rgba(255, 0, 122, 0.7); /* Neon glow */
+  }
+  
+  button:hover::after {
+    width: 300px; /* Ripple effect */
+    height: 300px;
+  }
+  
+  button:disabled {
+    background: linear-gradient(135deg, #555, #777); /* Muted gradient */
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  button:active:not(:disabled) {
+    transform: scale(0.98); /* Slight press effect */
+  }
+  
+  .error {
+    color: #ff4d6d; /* Softer neon red */
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    text-shadow: 0 0 5px rgba(255, 77, 109, 0.5);
+  }
+  
+  p {
+    text-align: center;
+    margin-top: 25px;
+    color: #b0b0c0;
+    font-size: 14px;
+  }
+  
+  a {
+    color: #00ffcc; /* Neon cyan */
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  a:hover {
+    color: #ff007a; /* Neon pink on hover */
+    text-shadow: 0 0 10px rgba(255, 0, 122, 0.7);
+  }
+  
+  a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: #ff007a;
+    transition: width 0.3s ease;
+  }
+  
+  a:hover::after {
+    width: 100%; /* Underline animation */
+  }
+  
+  /* Animation for container entrance */
+  @keyframes floatIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Optional: Add this to styles.css for a background */
+  body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e); /* Dark cosmic gradient */
+    min-height: 100vh;
+  }

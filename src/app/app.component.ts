@@ -1,12 +1,14 @@
+// app.component.ts
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
+  standalone: true,
+  imports: [RouterOutlet], // Import RouterOutlet here
+  template: `
+    <router-outlet></router-outlet>
+  `,
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'test-magic';
-}
+export class AppComponent {}
